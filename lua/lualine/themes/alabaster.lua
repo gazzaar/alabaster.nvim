@@ -1,11 +1,11 @@
 local colors
 if vim.o.background == "dark" then
     colors = {
-        color1 = "#162022",
+        color1 = "#3c3836",
         color2 = "#cd974b",
-        color3 = "#cecece",
+        color3 = "#ebdbb2",
         color4 = "#9F9F9F",
-        color5 = "#333333",
+        color5 = "#282828",
         color6 = "#cc8bc9",
     }
 else

@@ -27,10 +27,10 @@ if vim.o.background == "dark" then
     vim.g.terminal_color_15 = "#ffffff"
 
     -- colors
-    local bg = "#0e1415"
-    local fg = "#cecece"
+    local bg = "#282828"
+    local fg = "#ebdbb2"
     local punct_fg = "#708b8d"
-    local def_fg = "#71ade7"
+    local def_fg = "#458588"
     local const_fg = "#cc8bc9"
     local active = "#cd974b"
     local string_fg = "#95cb82"
@@ -38,7 +38,7 @@ if vim.o.background == "dark" then
     local diffadd = "#6abf40"
     local diffdelete = "#d2322d"
     local diffchange = "#ec8013"
-    local statusline = "#162022"
+    local statusline = "#3c3836"
     local comment = "#dfdf8e"
     local dim_comment = "#696969"
     local mistake = {
@@ -49,7 +49,7 @@ if vim.o.background == "dark" then
     local warn = "#f4b371"
     local hint = "#8ebeec"
     local info = "#88cc66"
-    local ansi = {
+    local         ansi = {
         black = "#333333",
         blue = "#71aed7",
         brightyellow = "#dfdf8e",
@@ -57,11 +57,11 @@ if vim.o.background == "dark" then
         green = "#95cb82",
         magenta = "#cc8bc9",
         red = "#c33c33",
-        white = "#cecece",
+        white = "#ebdbb2",
         yellow = "#cd974b",
     }
     local comment_fg = vim.g.alabaster_dim_comments and dim_comment or comment
-    local pmenu_bg = "#182325"
+    local pmenu_bg = "#3c3836"
     local float_bg = vim.g.alabaster_floatborder and bg or pmenu_bg
     local floatborder = vim.g.alabaster_floatborder and { bg = bg, fg = "#333333" }
         or {
@@ -70,24 +70,24 @@ if vim.o.background == "dark" then
         }
     theme = {
         Comment = { fg = comment_fg },
-        ColorColumn = { bg = "#182325" },
+        ColorColumn = { bg = "#3c3836" },
         Conceal = { fg = "#b0b0b0" },
         Cursor = { bg = active, fg = "#000000" },
         -- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
         -- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
-        CursorColumn = { bg = "#182325" },
-        CursorLine = { bg = "#182325" },
+        CursorColumn = { bg = "#3c3836" },
+        CursorLine = { bg = "#3c3836" },
         Directory = { fg = ansi.blue },
         DiffAdd = { bg = "#244032", fg = "#56d364" },
         DiffDelete = { bg = "#462c32", fg = "#f85149" },
         DiffText = { fg = "#341a00", bg = "#fff987" },
         DiffChange = { bg = "#341a00", fg = "#e3b341" },
-        EndOfBuffer = { fg = "#354c50" },
+        EndOfBuffer = { fg = "#504945" },
         -- TermCursor   { }, -- cursor in a focused terminal
         TermCursorNC = { fg = bg, bg = fg },
         ErrorMsg = { fg = error, bg = mistake.bg },
         VertSplit = { fg = "#2b3d40" },
-        Folded = { bg = "#182325", fg = "#7d7d7d" },
+        Folded = { bg = "#3c3836", fg = "#7d7d7d" },
         FoldColumn = { bg = bg, fg = "#4d4d4d" },
         SignColumn = {},
         IncSearch = { bg = ansi.yellow, fg = bg },
@@ -105,12 +105,12 @@ if vim.o.background == "dark" then
         -- NormalNC     { }, -- normal text in non-current windows
         FloatBorder = floatborder,
         Pmenu = { bg = pmenu_bg },
-        PmenuSel = { bg = "#354c50" },
-        PmenuSbar = { bg = "#212f31" },
-        PmenuThumb = { bg = "#47666b" },
+        PmenuSel = { bg = "#504945" },
+        PmenuSbar = { bg = "#3c3836" },
+        PmenuThumb = { bg = "#504945" },
         Question = { fg = diffadd },
-        QuickFixLine = { bg = "#182325" },
-        Search = { bg = "#354c50" },
+        QuickFixLine = { bg = "#3c3836" },
+        Search = { bg = "#504945" },
         SpecialKey = { fg = ansi.cyan },
         SpellBad = { undercurl = 1, sp = ansi.red },
         SpellCap = { undercurl = 1, sp = ansi.blue },
@@ -122,10 +122,10 @@ if vim.o.background == "dark" then
         TabLineFill = { bg = statusline },
         TabLineSel = { bg = statusline, fg = ansi.blue },
         Title = { fg = const_fg },
-        Visual = { bg = "#293334" },
-        VisualNOS = { bg = "#293334" },
+        Visual = { bg = "#504945" },
+        VisualNOS = { bg = "#504945" },
         WarningMsg = { fg = "#e1ad4c" },
-        WildMenu = { bg = "#354c50" },
+        WildMenu = { bg = "#504945" },
         WinBar = { bg = bg, fg = ansi.white, bold = true },
         WinBarNC = { bg = bg, fg = "#7d7d7d" },
 
@@ -162,7 +162,7 @@ if vim.o.background == "dark" then
         -- SpecialChar = { fg = diffchange }, --  special character in a constant
         -- Tag            { }, --    you can use CTRL-] on this
         -- Delimiter      { },
-        SpecialComment = { bg = "#1d292b", fg = ansi.blue },
+        SpecialComment = { bg = "#3c3836", fg = ansi.blue },
         debugPc = { bg = "#0f2534" },
         debugBreakpoint = { bg = "#b33229" },
         helpHyperTextJump = { fg = ansi.magenta },
@@ -183,9 +183,9 @@ if vim.o.background == "dark" then
         Todo = { bg = "#d0d058", fg = bg },
 
         --- Diagnostic
-        LspReferenceText = { bg = "#253437" },
-        LspReferenceRead = { bg = "#253437" },
-        LspReferenceWrite = { bg = "#253437", underline = 1, sp = active },
+        LspReferenceText = { bg = "#3c3836" },
+        LspReferenceRead = { bg = "#3c3836" },
+        LspReferenceWrite = { bg = "#3c3836", underline = 1, sp = active },
         LspCodeLens = { fg = "#5c5c5c" },
         LspCodeLensSeparator = { fg = "#5c5c5c" },
 
@@ -208,13 +208,13 @@ if vim.o.background == "dark" then
         TSError = { bg = mistake.bg, fg = mistake.fg },
         TSException = { fg = ansi.white },
         TSField = { fg = ansi.white },
-        TSFunction = { fg = ansi.white },
-        TSFuncBuiltin = { fg = ansi.white },
-        TSFuncMacro = { fg = ansi.white },
+        TSFunction = { fg = def_fg },
+        TSFuncBuiltin = { fg = def_fg },
+        TSFuncMacro = { fg = def_fg },
         TSKeyword = { fg = ansi.white },
         TSKeywordFunction = { fg = ansi.white },
         TSLabel = { fg = ansi.white },
-        TSMethod = { fg = ansi.white },
+        TSMethod = { fg = def_fg },
         TSNamespace = { fg = ansi.white },
         TSNone = { fg = const_fg },
         TSParameter = { fg = ansi.white },
@@ -225,8 +225,8 @@ if vim.o.background == "dark" then
         TSPunctSpecial = { fg = punct_fg },
         TSRepeat = { fg = ansi.white },
         TSString = { fg = string_fg },
-        TSStringRegex = { bg = "#1d292b", fg = const_fg },
-        TSStringEscape = { bg = "#1d292b", fg = const_fg },
+        TSStringRegex = { bg = "#3c3836", fg = const_fg },
+        TSStringEscape = { bg = "#3c3836", fg = const_fg },
         TSSymbol = {},
         TSType = { fg = ansi.white },
         TSTypeBuiltin = { fg = ansi.white },
@@ -243,14 +243,14 @@ if vim.o.background == "dark" then
         ["@error"] = { bg = mistake.bg, fg = mistake.fg },
         ["@exception"] = { fg = ansi.white },
         ["@field"] = { fg = ansi.white },
-        ["@function"] = { fg = ansi.white },
-        ["@function.builtin"] = { fg = ansi.white },
-        ["@function.macro"] = { fg = ansi.white },
+        ["@function"] = { fg = def_fg },
+        ["@function.builtin"] = { fg = def_fg },
+        ["@function.macro"] = { fg = def_fg },
         ["@keyword"] = { fg = ansi.white },
         ["@keyword.function"] = { fg = ansi.white },
         ["@keyword.operator"] = { fg = punct_fg },
         ["@label"] = { fg = ansi.white },
-        ["@method"] = { fg = ansi.white },
+        ["@method"] = { fg = def_fg },
         ["@module"] = { fg = ansi.white },
         ["@namespace"] = { fg = ansi.white },
         ["@none"] = { fg = const_fg },
@@ -262,8 +262,8 @@ if vim.o.background == "dark" then
         ["@punctuation.special"] = { fg = punct_fg },
         ["@repeat"] = { fg = ansi.white },
         ["@string"] = { fg = string_fg },
-        ["@string.regex"] = { bg = "#1d292b", fg = const_fg },
-        ["@string.escape"] = { bg = "#1d292b", fg = const_fg },
+        ["@string.regex"] = { bg = "#3c3836", fg = const_fg },
+        ["@string.escape"] = { bg = "#3c3836", fg = const_fg },
         ["@symbol"] = {},
         ["@type"] = { fg = ansi.white },
         ["@type.builtin"] = { fg = ansi.white },
@@ -272,7 +272,7 @@ if vim.o.background == "dark" then
         ["@tag"] = { fg = ansi.white },
         ["@tag.delimiter"] = { fg = punct_fg },
         ["@text"] = { fg = ansi.white },
-        ["@text.note"] = { bg = "#1d292b", fg = ansi.blue },
+        ["@text.note"] = { bg = "#3c3836", fg = ansi.blue },
         ["@text.warning"] = { bg = "#d0d058", fg = bg },
 
         --- Theme specific
@@ -367,7 +367,7 @@ if vim.o.background == "dark" then
         dbui_help = { fg = dim_comment },
         dbui_connection_source = { fg = dim_comment },
         --- nvim-dap-virtual-text
-        NvimDapVirtualText = { bg = "#1d292b", fg = ansi.cyan },
+        NvimDapVirtualText = { bg = "#3c3836", fg = ansi.cyan },
         --- Noice
         NoiceCmdlineIcon = { link = "AlabasterDarkGreen" },
         NoiceCmdlinePopupBorder = { link = "AlabasterDarkGreen" },
@@ -387,8 +387,8 @@ if vim.o.background == "dark" then
 
         ["@lsp.mod.declaration"] = { fg = fg },
         ["@lsp.type.enumMember"] = { fg = fg },
-        ["@lsp.type.function"] = { fg = fg },
-        ["@lsp.type.method"] = { fg = fg },
+        ["@lsp.type.function"] = { fg = def_fg },
+        ["@lsp.type.method"] = { fg = def_fg },
         ["@lsp.type.selfKeyword"] = { fg = fg },
         ["@lsp.typemod.class.declaration"] = { fg = def_fg },
         ["@lsp.typemod.class.definition"] = { fg = def_fg },
@@ -398,6 +398,7 @@ if vim.o.background == "dark" then
         ["@lsp.typemod.function.definition"] = { fg = def_fg },
         ["@lsp.typemod.macro.declaration"] = { fg = def_fg },
         ["@lsp.typemod.method.declaration"] = { fg = def_fg },
+        ["@lsp.typemod.method.definition"] = { fg = def_fg },
         ["@lsp.typemod.selfKeyword"] = { fg = fg },
         ["@lsp.typemod.struct.declaration"] = { fg = def_fg },
         ["@lsp.typemod.type.declaration"] = { fg = def_fg },
