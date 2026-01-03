@@ -9,56 +9,56 @@ local theme
 ---@diagnostic disable: undefined-global
 if vim.o.background == "dark" then
     -- terminal colors
-    vim.g.terminal_color_0 = "#000000"
-    vim.g.terminal_color_1 = "#d2322d"
-    vim.g.terminal_color_2 = "#6abf40"
-    vim.g.terminal_color_3 = "#cd974b"
-    vim.g.terminal_color_4 = "#217EBC"
-    vim.g.terminal_color_5 = "#9B3596"
-    vim.g.terminal_color_6 = "#178F79"
-    vim.g.terminal_color_7 = "#cecece"
-    vim.g.terminal_color_8 = "#333333"
-    vim.g.terminal_color_9 = "#c33c33"
-    vim.g.terminal_color_10 = "#95cb82"
-    vim.g.terminal_color_11 = "#dfdf8e"
-    vim.g.terminal_color_12 = "#71aed7"
-    vim.g.terminal_color_13 = "#cc8bc9"
-    vim.g.terminal_color_14 = "#47BEA9"
-    vim.g.terminal_color_15 = "#ffffff"
+    vim.g.terminal_color_0 = "#282828"
+    vim.g.terminal_color_1 = "#cc241d"
+    vim.g.terminal_color_2 = "#98971a"
+    vim.g.terminal_color_3 = "#d79921"
+    vim.g.terminal_color_4 = "#458588"
+    vim.g.terminal_color_5 = "#b16286"
+    vim.g.terminal_color_6 = "#689d6a"
+    vim.g.terminal_color_7 = "#a89984"
+    vim.g.terminal_color_8 = "#928374"
+    vim.g.terminal_color_9 = "#fb4934"
+    vim.g.terminal_color_10 = "#b8bb26"
+    vim.g.terminal_color_11 = "#fabd2f"
+    vim.g.terminal_color_12 = "#83a598"
+    vim.g.terminal_color_13 = "#d3869b"
+    vim.g.terminal_color_14 = "#8ec07c"
+    vim.g.terminal_color_15 = "#ebdbb2"
 
     -- colors
     local bg = "#282828"
     local fg = "#ebdbb2"
-    local punct_fg = "#708b8d"
+    local punct_fg = "#928374"
     local def_fg = "#458588"
     local const_fg = "#b16286"
-    local active = "#cd974b"
+    local active = "#d79921"
     local string_fg = "#98971a"
-    local darker_fg = "#7d7d7d"
-    local diffadd = "#6abf40"
-    local diffdelete = "#d2322d"
-    local diffchange = "#ec8013"
+    local darker_fg = "#928374"
+    local diffadd = "#689d6a"
+    local diffdelete = "#cc241d"
+    local diffchange = "#d79921"
     local statusline = "#3c3836"
     local comment = "#d79921"
-    local dim_comment = "#696969"
+    local dim_comment = "#928374"
     local mistake = {
-        fg = "#c33c33",
-        bg = "#2b1d1e",
+        fg = "#cc241d",
+        bg = "#3c2416",
     }
-    local error = "#d13e23"
-    local warn = "#f4b371"
-    local hint = "#8ebeec"
-    local info = "#88cc66"
-    local         ansi = {
-        black = "#333333",
-        blue = "#71aed7",
-        brightyellow = "#dfdf8e",
-        cyan = "#47bea9",
-        green = "#95cb82",
-        magenta = "#cc8bc9",
-        red = "#c33c33",
+    local error = "#cc241d"
+    local warn = "#d79921"
+    local hint = "#83a598"
+    local info = "#689d6a"
+    local ansi = {
+        black = "#282828",
+        blue = "#458588",
+        brightyellow = "#fabd2f",
+        cyan = "#83a598",
+        green = "#689d6a",
+        magenta = "#b16286",
+        red = "#cc241d",
         white = "#ebdbb2",
-        yellow = "#cd974b",
+        yellow = "#d79921",
     }
     local comment_fg = vim.g.alabaster_dim_comments and dim_comment or comment
     local pmenu_bg = "#3c3836"
@@ -86,20 +86,20 @@ if vim.o.background == "dark" then
         -- TermCursor   { }, -- cursor in a focused terminal
         TermCursorNC = { fg = bg, bg = fg },
         ErrorMsg = { fg = error, bg = mistake.bg },
-        VertSplit = { fg = "#2b3d40" },
-        Folded = { bg = "#3c3836", fg = "#7d7d7d" },
-        FoldColumn = { bg = bg, fg = "#4d4d4d" },
+        VertSplit = { fg = "#504945" },
+        Folded = { bg = "#3c3836", fg = "#928374" },
+        FoldColumn = { bg = bg, fg = "#928374" },
         SignColumn = {},
         IncSearch = { bg = ansi.yellow, fg = bg },
         -- Substitute   { }, -- |:substitute| replacement text highlighting
-        LineNr = { fg = "#5c5c5c" },
+        LineNr = { fg = "#928374" },
         CursorLineNr = { fg = ansi.blue, bold = 1 },
         MatchParen = { underline = 1, sp = active },
         -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
         -- MsgArea      { }, -- Area for messages and cmdline
         -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
         MoreMsg = { fg = ansi.green, bold = 1 },
-        NonText = { fg = "#696969" },
+        NonText = { fg = "#928374" },
         Normal = { bg = bg, fg = fg },
         NormalFloat = { bg = float_bg },
         -- NormalNC     { }, -- normal text in non-current windows
@@ -117,8 +117,8 @@ if vim.o.background == "dark" then
         SpellLocal = { undercurl = 1, sp = ansi.cyan },
         SpellRare = { undercurl = 1, sp = ansi.magenta },
         StatusLine = { bg = statusline, fg = fg },
-        StatusLineNC = { bg = statusline, fg = "#9f9f9f" },
-        TabLine = { bg = statusline, fg = "#7d7d7d" },
+        StatusLineNC = { bg = statusline, fg = "#928374" },
+        TabLine = { bg = statusline, fg = "#928374" },
         TabLineFill = { bg = statusline },
         TabLineSel = { bg = statusline, fg = ansi.blue },
         Title = { fg = const_fg },
@@ -127,7 +127,7 @@ if vim.o.background == "dark" then
         WarningMsg = { fg = "#e1ad4c" },
         WildMenu = { bg = "#504945" },
         WinBar = { bg = bg, fg = ansi.white, bold = true },
-        WinBarNC = { bg = bg, fg = "#7d7d7d" },
+        WinBarNC = { bg = bg, fg = "#928374" },
 
         --- SYNTAX I: TS groups link to these
         Constant = { fg = const_fg },
@@ -186,8 +186,8 @@ if vim.o.background == "dark" then
         LspReferenceText = { bg = "#3c3836" },
         LspReferenceRead = { bg = "#3c3836" },
         LspReferenceWrite = { bg = "#3c3836", underline = 1, sp = active },
-        LspCodeLens = { fg = "#5c5c5c" },
-        LspCodeLensSeparator = { fg = "#5c5c5c" },
+        LspCodeLens = { fg = "#928374" },
+        LspCodeLensSeparator = { fg = "#928374" },
 
         --- Diagnostic
         DiagnosticError = { fg = error },
@@ -221,7 +221,7 @@ if vim.o.background == "dark" then
         TSParameterReference = { fg = ansi.white },
         TSProperty = { fg = ansi.white },
         TSPunctDelimiter = { fg = punct_fg },
-        TSPunctBracket = { fg = "#bababa" },
+        TSPunctBracket = { fg = "#928374" },
         TSPunctSpecial = { fg = punct_fg },
         TSRepeat = { fg = ansi.white },
         TSString = { fg = string_fg },
@@ -258,7 +258,7 @@ if vim.o.background == "dark" then
         ["@parameter.reference"] = { fg = ansi.white },
         ["@property"] = { fg = ansi.white },
         ["@punctuation.delimiter"] = { fg = punct_fg },
-        ["@punctuation.bracket"] = { fg = "#bababa" },
+        ["@punctuation.bracket"] = { fg = "#928374" },
         ["@punctuation.special"] = { fg = punct_fg },
         ["@repeat"] = { fg = ansi.white },
         ["@string"] = { fg = string_fg },
@@ -283,11 +283,11 @@ if vim.o.background == "dark" then
         ["@AlabasterString"] = { fg = string_fg },
         ["@AlabasterHashbang"] = { fg = dim_comment },
         --- Gitsigns
-        GitSignsAdd = { fg = diffadd },
+        GitSignsAdd = { fg = "#689d6a" },
         GitSignsChange = { fg = diffchange },
         GitSignsDelete = { fg = diffdelete },
         --- Telescope
-        TelescopeBorder = { fg = "#2b3d40" },
+        TelescopeBorder = { fg = "#504945" },
         TelescopeMatching = { fg = "#f09942" },
         TelescopeMultiSelection = { fg = ansi.magenta },
         TelescopePromptPrefix = { fg = ansi.blue },
@@ -295,7 +295,7 @@ if vim.o.background == "dark" then
         TelescopeTitle = { fg = ansi.brightyellow },
         TelescopeResultsTitle = { fg = ansi.yellow },
         --- fzf-lua
-        FzfLuaBorder = { fg = "#2b3d40" },
+        FzfLuaBorder = { fg = "#504945" },
         --- mini.nvim
         MiniPickMatchCurrent  = { fg = "#f09942" },
         --- Neogit
@@ -336,7 +336,7 @@ if vim.o.background == "dark" then
         AlabasterBrightYellow = { fg = ansi.brightyellow },
         AlabasterCyan = { fg = ansi.cyan },
         AlabasterGreen = { fg = ansi.green },
-        AlabasterDarkGreen = { fg = "#6abf40" },
+        AlabasterDarkGreen = { fg = "#689d6a" },
         AlabasterMagenta = { fg = ansi.magenta },
         AlabasterRed = { fg = ansi.red },
         AlabasterWhite = { fg = ansi.white },
@@ -387,8 +387,8 @@ if vim.o.background == "dark" then
 
         ["@lsp.mod.declaration"] = { fg = fg },
         ["@lsp.type.enumMember"] = { fg = fg },
-        ["@lsp.type.function"] = { fg = def_fg },
-        ["@lsp.type.method"] = { fg = def_fg },
+        ["@lsp.type.function"] = { fg = fg },
+        ["@lsp.type.method"] = { fg = fg },
         ["@lsp.type.selfKeyword"] = { fg = fg },
         ["@lsp.typemod.class.declaration"] = { fg = def_fg },
         ["@lsp.typemod.class.definition"] = { fg = def_fg },
@@ -431,13 +431,13 @@ else
     local active = "#ffbc5d"
     local active_blue = "#007acc"
     local string_fg = "#448c27"
-    local darker_fg = "#7d7d7d"
+    local darker_fg = "#928374"
     local diffadd = "#284918"
     local diffdelete = "#B40600"
     local diffchange = "#ec8013"
     local statusline = "#c9c9c9"
     local comment = "#aa3731"
-    local dim_comment = "#696969"
+    local dim_comment = "#928374"
     local mistake = {
         fg = "#c33c33",
         bg = "#f8b28f",
@@ -496,7 +496,7 @@ else
         -- MsgArea      { }, -- Area for messages and cmdline
         -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
         MoreMsg = { fg = ansi.green, bold = 1 },
-        NonText = { fg = "#696969" },
+        NonText = { fg = "#928374" },
         Normal = { bg = bg, fg = fg },
         NormalFloat = { bg = float_bg },
         -- NormalNC     { }, -- normal text in non-current windows
@@ -791,6 +791,7 @@ else
         ["@lsp.typemod.function.definition"] = { fg = def_fg },
         ["@lsp.typemod.macro.declaration"] = { fg = def_fg },
         ["@lsp.typemod.method.declaration"] = { fg = def_fg },
+        ["@lsp.typemod.method.definition"] = { fg = def_fg },
         ["@lsp.typemod.selfKeyword"] = { fg = fg },
         ["@lsp.typemod.struct.declaration"] = { fg = def_fg },
         ["@lsp.typemod.type.declaration"] = { fg = def_fg },

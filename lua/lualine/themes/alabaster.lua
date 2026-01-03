@@ -6,7 +6,7 @@ if vim.o.background == "dark" then
         color3 = "#ebdbb2",
         color4 = "#9F9F9F",
         color5 = "#282828",
-        color6 = "#cc8bc9",
+        color6 = "#b16286",
     }
 else
     colors = {
