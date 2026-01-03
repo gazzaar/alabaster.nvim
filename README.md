@@ -1,6 +1,6 @@
-Alabaster Color Scheme
-**NOTE:** This is a fork form the original ~p00f/alabaster.nvim~ but bc I love gruvbox, I just changed some colors.
-===
+# Alabaster Color Scheme
+
+**NOTE:** This is a fork form the original `p00f/alabaster.nvim` but bc I love gruvbox, I just changed some colors.
 
 A color scheme with minimal amount of highlighting for neovim.
 
