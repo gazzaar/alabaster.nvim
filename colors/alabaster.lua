@@ -318,16 +318,16 @@ if vim.o.background == "dark" then
 		StartifySlash = { fg = "#4e6e75" },
 		StartifyPath = { fg = "#4e6e75" },
 		--- Statusline
-		StatuslineAdd = { fg = diffadd, bg = statusline },
-		StatuslineErr = { fg = error, bg = statusline },
-		StatuslineHint = { fg = hint, bg = statusline },
-		StatuslineInfo = { fg = info, bg = statusline },
-		StatuslineWarn = { fg = warn, bg = statusline },
-		StatuslineBlue = { fg = ansi.blue, bg = statusline },
-		StatuslineRed = { fg = ansi.red, bg = statusline },
-		StatuslineGreen = { fg = ansi.green, bg = statusline },
-		StatuslineCyan = { fg = ansi.cyan, bg = statusline },
-		StatuslineMagenta = { fg = ansi.magenta, bg = statusline },
+		StatuslineAdd = { fg = diffadd, bg = statusline }, -- #A9B665 on #32302F
+		StatuslineErr = { fg = error, bg = statusline }, -- #EA6962 on #32302F
+		StatuslineHint = { fg = hint, bg = statusline }, -- #7DAEA3 on #32302F
+		StatuslineInfo = { fg = info, bg = statusline }, -- #A9B665 on #32302F
+		StatuslineWarn = { fg = warn, bg = statusline }, -- #D8A657 on #32302F
+		StatuslineBlue = { fg = ansi.blue, bg = statusline }, -- #7DAEA3 on #32302F
+		StatuslineRed = { fg = ansi.red, bg = statusline }, -- #EA6962 on #32302F
+		StatuslineGreen = { fg = ansi.green, bg = statusline }, -- #A9B665 on #32302F
+		StatuslineCyan = { fg = ansi.cyan, bg = statusline }, -- #89B482 on #32302F
+		StatuslineMagenta = { fg = ansi.magenta, bg = statusline }, -- #D3869B on #32302F
 		--- ALE
 		ALEWarningSign = { fg = warn },
 		--- vim-matchup
