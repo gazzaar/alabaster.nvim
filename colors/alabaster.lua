@@ -299,7 +299,17 @@ if vim.o.background == "dark" then
 		--- fzf-lua
 		FzfLuaBorder = { fg = "#504945" },
 		--- mini.nvim
-		MiniPickMatchCurrent = { fg = "#f09942" },
+		MiniPickMatchCurrent = { fg = "#D8A657" },
+		MiniStatuslineModeNormal = { bg = "#3A3735", fg = "#D4BE98", gui = "bold" }, -- bg_statusline2, fg0
+		MiniStatuslineModeInsert = { bg = "#A9B665", fg = "#282828", gui = "bold" }, -- green, bg0
+		MiniStatuslineModeVisual = { bg = "#D3869B", fg = "#282828", gui = "bold" }, -- purple, bg0
+		MiniStatuslineModeReplace = { bg = "#EA6962", fg = "#282828", gui = "bold" }, -- red, bg0
+		MiniStatuslineModeCommand = { bg = "#D8A657", fg = "#282828", gui = "bold" }, -- yellow, bg0
+		MiniStatuslineModeOther = { bg = "#7DAEA3", fg = "#282828", gui = "bold" }, -- aqua, bg0
+		MiniStatuslineDevinfo = { bg = "#32302F", fg = "#D4BE98" }, -- bg1, fg0
+		MiniStatuslineFilename = { bg = "#32302F", fg = "#D4BE98" }, -- bg1, fg0
+		MiniStatuslineFileinfo = { bg = "#32302F", fg = "#D4BE98" }, -- bg1, fg0
+		MiniStatuslineInactive = { bg = "#32302F", fg = "#928374" }, -- bg1, grey1
 		--- Neogit
 		NeogitPopupActionDisabled = { fg = darker_fg },
 		NeogitPopupActionKey = { fg = ansi.magenta },
@@ -337,8 +347,8 @@ if vim.o.background == "dark" then
 		AlabasterBlue = { fg = ansi.blue },
 		AlabasterBrightYellow = { fg = ansi.brightyellow },
 		AlabasterCyan = { fg = ansi.cyan },
-		AlabasterGreen = { fg = ansi.green },
-		AlabasterDarkGreen = { fg = "#689d6a" },
+		AlabasterGreen = { fg = ansi.green }, -- #A9B665 (Gruvbox Material green)
+		AlabasterDarkGreen = { fg = "#A9B665" }, -- Change from #689d6a to Gruvbox Material green
 		AlabasterMagenta = { fg = ansi.magenta },
 		AlabasterRed = { fg = ansi.red },
 		AlabasterWhite = { fg = ansi.white },
@@ -681,7 +691,7 @@ else
 		["@AlabasterString"] = { fg = string_fg },
 		["@AlabasterHashbang"] = { fg = dim_comment },
 		--- Gitsigns
-		GitSignsAdd = { fg = "#6abf40" },
+		GitSignsAdd = { fg = "#A9B665" },
 		GitSignsChange = { fg = diffchange },
 		GitSignsDelete = { fg = diffdelete },
 		--- Telescope
