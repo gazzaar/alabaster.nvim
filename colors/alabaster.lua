@@ -28,7 +28,8 @@ if vim.o.background == "dark" then
 
     -- colors
     local bg = "#282828"
-    local fg = "#ebdbb2"
+    -- use a slightly darker foreground from the gruvbox-material palette
+    local fg = "#D4BE98"
     local punct_fg = "#928374"
     local def_fg = "#458588"
     local const_fg = "#b16286"
@@ -38,7 +39,8 @@ if vim.o.background == "dark" then
     local diffadd = "#689d6a"
     local diffdelete = "#cc241d"
     local diffchange = "#d79921"
-    local statusline = "#3c3836"
+    -- statusline uses a subtle bg variant instead of an accent/orange tone
+    local statusline = "#32302F"
     local comment = "#d79921"
     local dim_comment = "#928374"
     local mistake = {
@@ -57,7 +59,7 @@ if vim.o.background == "dark" then
         green = "#689d6a",
         magenta = "#b16286",
         red = "#cc241d",
-        white = "#ebdbb2",
+        white = fg,
         yellow = "#d79921",
     }
     local comment_fg = vim.g.alabaster_dim_comments and dim_comment or comment
@@ -163,7 +165,8 @@ if vim.o.background == "dark" then
         -- Tag            { }, --    you can use CTRL-] on this
         -- Delimiter      { },
         SpecialComment = { bg = "#3c3836", fg = ansi.blue },
-        debugPc = { bg = "#0f2534" },
+        -- use gruvbox-material diff blue for current debug line
+        debugPc = { bg = "#0E363E" },
         debugBreakpoint = { bg = "#b33229" },
         helpHyperTextJump = { fg = ansi.magenta },
         helpSectionDelim = { fg = ansi.magenta },
@@ -194,10 +197,11 @@ if vim.o.background == "dark" then
         DiagnosticWarn = { fg = warn },
         DiagnosticHint = { fg = hint },
         DiagnosticInfo = { fg = info },
-        DiagnosticVirtualTextError = { bg = "#350B0B", fg = "#D1503A" },
-        DiagnosticVirtualTextWarn = { bg = "#3F240A", fg = "#C8935D" },
-        DiagnosticVirtualTextHint = { bg = "#1D2B37", fg = "#7E9CB9" },
-        DiagnosticVirtualTextInfo = { bg = "#162C0B", fg = "#7BAC62" },
+        -- virtual text diagnostics use the material diff/visual backgrounds
+        DiagnosticVirtualTextError = { bg = "#402120", fg = "#EA6962" }, -- bg_diff_red / red
+        DiagnosticVirtualTextWarn = { bg = "#4F422E", fg = "#D8A657" }, -- bg_visual_yellow / yellow
+        DiagnosticVirtualTextHint = { bg = "#374141", fg = "#89B482" }, -- bg_visual_blue / aqua
+        DiagnosticVirtualTextInfo = { bg = "#3B4439", fg = "#A9B665" }, -- bg_visual_green / green
 
         --- Treesitter
         TSAttribute = {},

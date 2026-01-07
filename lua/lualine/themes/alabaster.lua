@@ -1,12 +1,13 @@
 local colors
 if vim.o.background == "dark" then
     colors = {
-        color1 = "#3c3836",
-        color2 = "#cd974b",
-        color3 = "#ebdbb2",
-        color4 = "#9F9F9F",
-        color5 = "#282828",
-        color6 = "#b16286",
+        -- gruvbox-material aligned
+        color1 = "#32302F", -- statusline base
+        color2 = "#EA6962", -- replace accent (red)
+        color3 = "#D4BE98", -- primary foreground
+        color4 = "#928374", -- inactive/secondary fg
+        color5 = "#3A3735", -- normal/section bg
+        color6 = "#D3869B", -- visual accent (purple)
     }
 else
     colors = {
