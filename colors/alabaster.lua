@@ -515,8 +515,8 @@ else
 		SpellCap = { undercurl = 1, sp = ansi.blue },
 		SpellLocal = { undercurl = 1, sp = ansi.cyan },
 		SpellRare = { undercurl = 1, sp = ansi.magenta },
-		StatusLine = { bg = statusline, fg = fg },
-		StatusLineNC = { bg = statusline, fg = "#9f9f9f" },
+		StatusLine = { bg = statusline, fg = fg }, -- #32302F bg, #D4BE98 fg (active)
+		StatusLineNC = { bg = statusline, fg = "#928374" }, -- #32302F bg, grey1 fg (inactive)
 		TabLine = { bg = statusline, fg = "#7d7d7d" },
 		TabLineFill = { bg = statusline },
 		TabLineSel = { bg = statusline, fg = ansi.blue },
