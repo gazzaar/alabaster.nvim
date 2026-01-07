@@ -82,8 +82,8 @@ if vim.o.background == "dark" then
 		Directory = { fg = ansi.blue },
 		DiffAdd = { bg = "#244032", fg = "#56d364" },
 		DiffDelete = { bg = "#462c32", fg = "#f85149" },
-		DiffText = { fg = "#341a00", bg = "#fff987" },
-		DiffChange = { bg = "#341a00", fg = "#e3b341" },
+		DiffText = { fg = "#282828", bg = "#D8A657" }, -- bold yellow highlight for exact changes
+		DiffChange = { bg = "#4F422E", fg = "#D8A657" }, -- subtle yellow background for changed lines
 		EndOfBuffer = { fg = "#504945" },
 		-- TermCursor   { }, -- cursor in a focused terminal
 		TermCursorNC = { fg = bg, bg = fg },
@@ -481,8 +481,8 @@ else
 		Directory = { fg = ansi.blue },
 		DiffAdd = { bg = "#ADFFB7", fg = "#0A7816" },
 		DiffDelete = { bg = "#F8B28F", fg = "#872C28" },
-		DiffText = { fg = "#fff987", bg = "#876004" },
-		DiffChange = { bg = "#fff987", fg = "#341a00" },
+		DiffText = { fg = "#282828", bg = "#D8A657" }, -- exact changes
+		DiffChange = { bg = "#32302F", fg = "#D4BE98" },
 		EndOfBuffer = { fg = "#b6b6b6" },
 		-- TermCursor   { }, -- cursor in a focused terminal
 		TermCursorNC = { fg = bg, bg = fg },
