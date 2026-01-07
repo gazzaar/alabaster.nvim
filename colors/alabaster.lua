@@ -299,13 +299,13 @@ if vim.o.background == "dark" then
 		--- fzf-lua
 		FzfLuaBorder = { fg = "#504945" },
 		--- mini.nvim
-		MiniPickMatchCurrent = { fg = "#D8A657" },
-		MiniStatuslineModeNormal = { bg = "#3A3735", fg = "#D4BE98", gui = "bold" }, -- bg_statusline2, fg0
-		MiniStatuslineModeInsert = { bg = "#A9B665", fg = "#282828", gui = "bold" }, -- green, bg0
-		MiniStatuslineModeVisual = { bg = "#D3869B", fg = "#282828", gui = "bold" }, -- purple, bg0
-		MiniStatuslineModeReplace = { bg = "#EA6962", fg = "#282828", gui = "bold" }, -- red, bg0
-		MiniStatuslineModeCommand = { bg = "#D8A657", fg = "#282828", gui = "bold" }, -- yellow, bg0
-		MiniStatuslineModeOther = { bg = "#7DAEA3", fg = "#282828", gui = "bold" }, -- aqua, bg0
+		--- mini.statusline
+		MiniStatuslineModeNormal = { bg = "#3A3735", fg = "#D4BE98", bold = true }, -- bg_statusline2, fg0
+		MiniStatuslineModeInsert = { bg = "#A9B665", fg = "#282828", bold = true }, -- green, bg0
+		MiniStatuslineModeVisual = { bg = "#D3869B", fg = "#282828", bold = true }, -- purple, bg0
+		MiniStatuslineModeReplace = { bg = "#EA6962", fg = "#282828", bold = true }, -- red, bg0
+		MiniStatuslineModeCommand = { bg = "#D8A657", fg = "#282828", bold = true }, -- yellow, bg0
+		MiniStatuslineModeOther = { bg = "#7DAEA3", fg = "#282828", bold = true }, -- aqua, bg0
 		MiniStatuslineDevinfo = { bg = "#32302F", fg = "#D4BE98" }, -- bg1, fg0
 		MiniStatuslineFilename = { bg = "#32302F", fg = "#D4BE98" }, -- bg1, fg0
 		MiniStatuslineFileinfo = { bg = "#32302F", fg = "#D4BE98" }, -- bg1, fg0
