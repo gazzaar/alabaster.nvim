@@ -8,64 +8,62 @@ vim.g.colors_name = "alabaster"
 local theme
 ---@diagnostic disable: undefined-global
 if vim.o.background == "dark" then
-	-- terminal colors
-	vim.g.terminal_color_0 = "#282828"
-	vim.g.terminal_color_1 = "#cc241d"
-	vim.g.terminal_color_2 = "#98971a"
-	vim.g.terminal_color_3 = "#d8A657"
-	vim.g.terminal_color_4 = "#458588"
-	vim.g.terminal_color_5 = "#b16286"
-	vim.g.terminal_color_6 = "#689d6a"
-	vim.g.terminal_color_7 = "#a89984"
-	vim.g.terminal_color_8 = "#928374"
-	vim.g.terminal_color_9 = "#fb4934"
-	vim.g.terminal_color_10 = "#b8bb26"
-	vim.g.terminal_color_11 = "#fabd2f"
-	vim.g.terminal_color_12 = "#83a598"
-	vim.g.terminal_color_13 = "#d3869b"
-	vim.g.terminal_color_14 = "#8ec07c"
-	vim.g.terminal_color_15 = "#ebdbb2"
+	-- terminal colors (Gruvbox Material)
+	vim.g.terminal_color_0 = "#32302F" -- bg1
+	vim.g.terminal_color_1 = "#EA6962" -- red
+	vim.g.terminal_color_2 = "#A9B665" -- green
+	vim.g.terminal_color_3 = "#D8A657" -- yellow
+	vim.g.terminal_color_4 = "#7DAEA3" -- blue/aqua
+	vim.g.terminal_color_5 = "#D3869B" -- purple
+	vim.g.terminal_color_6 = "#89B482" -- aqua (alternative)
+	vim.g.terminal_color_7 = "#D4BE98" -- fg0
+	vim.g.terminal_color_8 = "#928374" -- grey1
+	vim.g.terminal_color_9 = "#EA6962" -- bright red
+	vim.g.terminal_color_10 = "#A9B665" -- bright green
+	vim.g.terminal_color_11 = "#D8A657" -- bright yellow
+	vim.g.terminal_color_12 = "#7DAEA3" -- bright blue
+	vim.g.terminal_color_13 = "#D3869B" -- bright purple
+	vim.g.terminal_color_14 = "#89B482" -- bright aqua
+	vim.g.terminal_color_15 = "#DDC7A1" -- fg1
 
 	-- colors
-	local bg = "#282828"
-	-- use a slightly darker foreground from the gruvbox-material palette
-	local fg = "#D4BE98"
-	local punct_fg = "#928374"
-	local def_fg = "#458588"
-	local const_fg = "#b16286"
-	local active = "#d8A657"
-	local string_fg = "#98971a"
-	local darker_fg = "#928374"
-	local diffadd = "#689d6a"
-	local diffdelete = "#cc241d"
-	local diffchange = "#d8A657"
-	-- statusline uses a subtle bg variant instead of an accent/orange tone
-	local statusline = "#32302F"
-	local comment = "#d8A657"
-	local dim_comment = "#928374"
+	local bg = "#282828" -- bg0
+	local fg = "#D4BE98" -- fg0 (main foreground)
+	local punct_fg = "#928374" -- grey1 (punctuation)
+	local def_fg = "#7DAEA3" -- aqua (definitions/functions)
+	local const_fg = "#D3869B" -- purple (constants)
+	local active = "#D8A657" -- yellow (active/highlighted)
+	local string_fg = "#A9B665" -- green (strings)
+	local darker_fg = "#928374" -- grey1 (dimmed text)
+	local diffadd = "#A9B665" -- green (additions)
+	local diffdelete = "#EA6962" -- red (deletions)
+	local diffchange = "#D8A657" -- yellow (changes)
+	local statusline = "#32302F" -- bg1 (statusline background)
+	local comment = "#928374" -- grey1 (comments - more typical)
+	local dim_comment = "#7C6F64" -- grey0 (dimmed comments)
 	local mistake = {
-		fg = "#cc241d",
-		bg = "#3c2416",
+		fg = "#EA6962", -- red
+		bg = "#402120", -- bg_diff_red
 	}
-	local error = "#cc241d"
-	local warn = "#d8A657"
-	local hint = "#83a598"
-	local info = "#689d6a"
+	local error = "#EA6962" -- red
+	local warn = "#D8A657" -- yellow
+	local hint = "#7DAEA3" -- aqua
+	local info = "#A9B665" -- green
 	local ansi = {
-		black = "#282828",
-		blue = "#458588",
-		brightyellow = "#fabd2f",
-		cyan = "#83a598",
-		green = "#689d6a",
-		magenta = "#b16286",
-		red = "#cc241d",
-		white = fg,
-		yellow = "#d8A657",
+		black = "#282828", -- bg0
+		blue = "#7DAEA3", -- aqua
+		brightyellow = "#D8A657", -- yellow
+		cyan = "#89B482", -- aqua (alternative)
+		green = "#A9B665", -- green
+		magenta = "#D3869B", -- purple
+		red = "#EA6962", -- red
+		white = fg, -- fg0
+		yellow = "#D8A657", -- yellow
 	}
 	local comment_fg = vim.g.alabaster_dim_comments and dim_comment or comment
-	local pmenu_bg = "#3c3836"
+	local pmenu_bg = "#32302F" -- bg1 (popup menu background)
 	local float_bg = vim.g.alabaster_floatborder and bg or pmenu_bg
-	local floatborder = vim.g.alabaster_floatborder and { bg = bg, fg = "#333333" }
+	local floatborder = vim.g.alabaster_floatborder and { bg = bg, fg = "#32302F" } -- bg1
 		or {
 			bg = float_bg,
 			fg = float_bg,
